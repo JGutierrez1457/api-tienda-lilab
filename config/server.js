@@ -15,5 +15,6 @@ if(process.env.NODE_ENV!=='production'){
     app.use(cors()); //Configura y habilita CORS para el cliente
 }
 
+app.use('/api/items', require('../routers/items.router')) //Agrega middleware enrutador de items a /api/items/
 
 module.exports = app;
