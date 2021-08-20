@@ -12,7 +12,7 @@ const { Sequelize } = require('sequelize');
             host : DB_HOST
         });
         db.sequelize = sequelize;//Agrega instancia de sequelize con los datos de la BBDD
-        
+        db.items = require('../models/items.model')(sequelize, Sequelize);//Agrega modelo de items al objeto bd
     } catch (error) {
         console.log(error)
     }
